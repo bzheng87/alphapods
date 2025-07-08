@@ -30,7 +30,7 @@ If missing, install manually:
 
 pip install pandas numpy matplotlib seaborn cvxpy requests
 
-📂 2. File Structure
+### 📂 2. File Structure
 
 ├── part1.ipynb              # Data load, ticker mapping, setup
 ├── part2a.py                # Industry/sector data from FMP API
@@ -43,7 +43,7 @@ pip install pandas numpy matplotlib seaborn cvxpy requests
 ├── cumulative_strategy_returns.csv
 
 
-📊 3. Task A – Baseline CVaR Index
+### 📊 3. Task A – Baseline CVaR Index
 Implemented in: part1.ipynb
 
 ✔ Methodology
@@ -57,11 +57,11 @@ Max 5% per stock
 Quarterly rebalancing
 Transaction Costs: 10 bps round-trip (5 bps in, 5 bps out)
 
-✔  Benchmarks
+### ✔  Benchmarks
 Equal-Weighted SPX Portfolio – proxied by EQWL ETF
 Market Cap-Weighted Benchmark – proxied by OEF ETF
 
-📈 4. Outputs (What to Submit)
+### 📈 4. Outputs (What to Submit)
 File	Description
 daily_strategy_returns.csv	Daily returns for CVaR strategy and benchmarks
 cumulative_strategy_returns.csv	Cumulative performance (Growth of $1)
@@ -71,10 +71,10 @@ part1.ipynb Plot	Visual comparison of strategy vs. EQWL and OEF
 part1.ipynb Table	Annual return, volatility, Sharpe, CVaR, MDD, turnover
 
 
-📈 Part 2 – Alpha Enhancement
+### 📈 Part 2 – Alpha Enhancement
 Goal: Improve the out-of-sample risk-adjusted performance of the baseline CVaR strategy using a sector-based alpha overlay.
 
-✅ Methodology Summary
+### ✅ Methodology Summary
 We enhanced the original CVaR index by incorporating sector-based signals:
 
 All stocks were tagged by sector using ticker_industries.csv.
@@ -89,14 +89,14 @@ The strategies were evaluated and compared out-of-sample from Jan 2020 – Dec 2
 
 Final results include a combined strategy, blending both overlays for robustness.
 
-🧠 Idea Type
+### 🧠 Idea Type
 Alpha Overlays using historical sector returns:
 
 No ML/AI used—statistical and intuitive signals only.
 
 Tactical tilt based on simple historical performance, avoiding lookahead bias.
 
-📂 Files
+### 📂 Files
 File	Description
 part2c.ipynb	Momentum strategy: CVaR strategy overlaid with top sector allocation
 part2d.ipynb	Mean reversion strategy: CVaR strategy tilted toward worst-performing sectors
